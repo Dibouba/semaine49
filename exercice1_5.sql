@@ -1,7 +1,6 @@
 CREATE VIEW v_Reservation_Client_Hotel
 AS 
-SELECT res_id, cli_id, CONCAT(cli_nom,' ',cli_prenom) AS 'Nom Client', hot_nom AS 'Hotel',
-res_date_debut AS 'Date Reservation', res_date_fin AS 'Date Départ'
+SELECT res_id, CONCAT(cli_nom,' ',cli_prenom) AS 'Nom Client', hot_nom AS 'Hotel'
 FROM `client`
 JOIN  reservation
 ON `client`.cli_id = reservation.res_cli_id
